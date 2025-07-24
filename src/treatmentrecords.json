@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "treatment_name": "Physical Therapy",
+    "description": "Rehabilitation for back pain and posture correction.",
+    "doctor_assigned": "Dr. Emily Carter",
+    "cost": 1200,
+    "duration": 30,
+    "start_date": "2025-06-01",
+    "status": "Ongoing"
+  },
+  {
+    "id": 2,
+    "treatment_name": "Chemotherapy",
+    "description": "Cancer treatment using drugs to destroy cancer cells.",
+    "doctor_assigned": "Dr. Arjun Patel",
+    "cost": 8500,
+    "duration": 90,
+    "start_date": "2025-05-15",
+    "status": "Ongoing"
+  },
+  {
+    "id": 3,
+    "treatment_name": "Radiation Therapy",
+    "description": "Uses high-energy rays to target cancer cells.",
+    "doctor_assigned": "Dr. Grace Liu",
+    "cost": 9200,
+    "duration": 45,
+    "start_date": "2025-04-20",
+    "status": "Completed"
+  },
+  {
+    "id": 4,
+    "treatment_name": "Dialysis",
+    "description": "Treatment for kidney failure to remove waste products.",
+    "doctor_assigned": "Dr. Michael Smith",
+    "cost": 4000,
+    "duration": 60,
+    "start_date": "2025-06-10",
+    "status": "Ongoing"
+  },
+  {
+    "id": 5,
+    "treatment_name": "Appendectomy",
+    "description": "Surgical removal of the appendix.",
+    "doctor_assigned": "Dr. Sara Khan",
+    "cost": 3000,
+    "duration": 3,
+    "start_date": "2025-07-01",
+    "status": "Completed"
+  },
+  {
+    "id": 6,
+    "treatment_name": "Cardiac Bypass Surgery",
+    "description": "Improves blood flow to the heart muscle.",
+    "doctor_assigned": "Dr. Ryan Thompson",
+    "cost": 20000,
+    "duration": 10,
+    "start_date": "2025-06-15",
+    "status": "Scheduled"
+  },
+  {
+    "id": 7,
+    "treatment_name": "Cataract Surgery",
+    "description": "Removes cloudy lens to restore vision.",
+    "doctor_assigned": "Dr. Ayesha Malik",
+    "cost": 2500,
+    "duration": 1,
+    "start_date": "2025-07-05",
+    "status": "Scheduled"
+  },
+  {
+    "id": 8,
+    "treatment_name": "Orthopedic Surgery",
+    "description": "Repair of fractured bone and joint stabilization.",
+    "doctor_assigned": "Dr. Richard Nolan",
+    "cost": 9500,
+    "duration": 14,
+    "start_date": "2025-06-22",
+    "status": "Ongoing"
+  },
+  {
+    "id": 9,
+    "treatment_name": "Dental Implants",
+    "description": "Replacing missing teeth with artificial ones.",
+    "doctor_assigned": "Dr. Maria Estevez",
+    "cost": 3000,
+    "duration": 7,
+    "start_date": "2025-07-10",
+    "status": "Scheduled"
+  },
+  {
+    "id": 10,
+    "treatment_name": "Allergy Testing",
+    "description": "Identifying specific allergens causing reactions.",
+    "doctor_assigned": "Dr. Zoe Peterson",
+    "cost": 500,
+    "duration": 1,
+    "start_date": "2025-07-20",
+    "status": "Scheduled"
+  },
+  {
+    "id": 11,
+    "treatment_name": "Psychiatric Evaluation",
+    "description": "Assessment of mental health and behavioral disorders.",
+    "doctor_assigned": "Dr. Faisal Ahmed",
+    "cost": 800,
+    "duration": 1,
+    "start_date": "2025-07-15",
+    "status": "Ongoing"
+  },
+  {
+    "id": 12,
+    "treatment_name": "IV Antibiotic Therapy",
+    "description": "Intravenous delivery of antibiotics for severe infections.",
+    "doctor_assigned": "Dr. Laila Shams",
+    "cost": 1500,
+    "duration": 5,
+    "start_date": "2025-06-30",
+    "status": "Completed"
+  },
+  {
+    "id": 13,
+    "treatment_name": "Prenatal Care",
+    "description": "Regular medical checkups during pregnancy.",
+    "doctor_assigned": "Dr. Emma Lewis",
+    "cost": 2200,
+    "duration": 60,
+    "start_date": "2025-04-01",
+    "status": "Ongoing"
+  },
+  {
+    "id": 14,
+    "treatment_name": "Pediatric Checkup",
+    "description": "Routine checkup and vaccination for children.",
+    "doctor_assigned": "Dr. Noor Fatima",
+    "cost": 300,
+    "duration": 1,
+    "start_date": "2025-07-19",
+    "status": "Completed"
+  },
+  {
+    "id": 15,
+    "treatment_name": "Cosmetic Surgery",
+    "description": "Elective surgery to enhance appearance.",
+    "doctor_assigned": "Dr. Brandon Lee",
+    "cost": 7000,
+    "duration": 5,
+    "start_date": "2025-06-25",
+    "status": "Scheduled"
+  },
+  {
+    "id": 16,
+    "treatment_name": "Diabetes Management",
+    "description": "Ongoing care and medication for diabetic patients.",
+    "doctor_assigned": "Dr. Mahira Ansari",
+    "cost": 1300,
+    "duration": 30,
+    "start_date": "2025-05-01",
+    "status": "Ongoing"
+  },
+  {
+    "id": 17,
+    "treatment_name": "Ultrasound Imaging",
+    "description": "Imaging to view internal organs or fetus.",
+    "doctor_assigned": "Dr. Thomas Wren",
+    "cost": 600,
+    "duration": 1,
+    "start_date": "2025-07-18",
+    "status": "Completed"
+  },
+  {
+    "id": 18,
+    "treatment_name": "Vaccination",
+    "description": "Immunization against common diseases.",
+    "doctor_assigned": "Dr. Annie Jacob",
+    "cost": 200,
+    "duration": 1,
+    "start_date": "2025-07-12",
+    "status": "Completed"
+  },
+  {
+    "id": 19,
+    "treatment_name": "Hair Transplant",
+    "description": "Surgical treatment for hair loss.",
+    "doctor_assigned": "Dr. Omar Farooq",
+    "cost": 5000,
+    "duration": 2,
+    "start_date": "2025-07-08",
+    "status": "Scheduled"
+  },
+  {
+    "id": 20,
+    "treatment_name": "Hernia Repair",
+    "description": "Surgery to correct hernias in the abdomen.",
+    "doctor_assigned": "Dr. Reema Shah",
+    "cost": 4500,
+    "duration": 3,
+    "start_date": "2025-06-18",
+    "status": "Completed"
+  }
+]
