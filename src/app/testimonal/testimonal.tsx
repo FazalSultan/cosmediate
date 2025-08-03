@@ -3,7 +3,7 @@ import React from "react";
 export default function Testimonial() {
   return (
     <section className="bg-[#1344fe] text-white py-20 md:px-10 px-3 ">
-      <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-white">
+      <h2 className="text-3xl md:text-5xl font-semibold text-center mb-12 text-white">
           Lovely People Talk About Us
         </h2>
       <div className="container mx-auto">

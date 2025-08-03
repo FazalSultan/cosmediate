@@ -7,7 +7,7 @@ export default function Newsletter() {
   return (
     <section className="py-16 px-4">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">
+        <h2 className="text-3xl md:text-5xl font-semibold text-gray-900 mb-4">
           Subscribe to Our Newsletter
         </h2>
         <p className="text-gray-600 mb-10">
