@@ -4,7 +4,7 @@
     "treatment_name": "Physical Therapy",
     "description": "Rehabilitation for back pain and posture correction.",
     "doctor_assigned": "Dr. Emily Carter",
-    "cost": 1200,
+    "cost": 500,
     "duration": 30,
     "start_date": "2025-06-01",
     "status": "Ongoing"
@@ -14,7 +14,7 @@
     "treatment_name": "Chemotherapy",
     "description": "Cancer treatment using drugs to destroy cancer cells.",
     "doctor_assigned": "Dr. Arjun Patel",
-    "cost": 8500,
+    "cost": 5000,
     "duration": 90,
     "start_date": "2025-05-15",
     "status": "Ongoing"
@@ -24,7 +24,7 @@
     "treatment_name": "Radiation Therapy",
     "description": "Uses high-energy rays to target cancer cells.",
     "doctor_assigned": "Dr. Grace Liu",
-    "cost": 9200,
+    "cost": 5000,
     "duration": 45,
     "start_date": "2025-04-20",
     "status": "Completed"
@@ -144,7 +144,7 @@
     "treatment_name": "Cosmetic Surgery",
     "description": "Elective surgery to enhance appearance.",
     "doctor_assigned": "Dr. Brandon Lee",
-    "cost": 7000,
+    "cost": 1500,
     "duration": 5,
     "start_date": "2025-06-25",
     "status": "Scheduled"

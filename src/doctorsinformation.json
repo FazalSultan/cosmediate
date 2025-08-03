@@ -7,9 +7,10 @@
     "address": "6 Brickson Park Parkway",
     "specialist": "Dermatology",
     "fees": "500",
-    "image": "http://dummyimage.com/131x100.png/ff4444/ffffff"
+    "image": "/doctor1.jpg"
   },
-  {
+  
+{
     "id": 2,
     "full_name": "Tori ",
     "email": "twalrond1@illinois.edu",
@@ -17,7 +18,7 @@
     "address": "2 Barnett Plaza",
     "specialist": "Skin",
     "fees": "1000",
-    "image": "http://dummyimage.com/132x100.png/ff4444/ffffff"
+    "image": "/doctor2.jpg"
   },
   {
     "id": 3,
@@ -27,7 +28,7 @@
     "address": "55 Hauk Court",
     "specialist": "Dermatology",
     "fees": "2000",
-    "image": "http://dummyimage.com/155x100.png/dddddd/000000"
+    "image": "/doctor3.jpg"
   },
   {
     "id": 4,
@@ -37,7 +38,7 @@
     "address": "55 Hauk Court",
     "specialist": "Dermatology",
     "fees": "500",
-    "image": "http://dummyimage.com/108x100.png/cc0000/ffffff"
+    "image": "/doctor4.jpg"
   },
   {
     "id": 5,
@@ -47,7 +48,7 @@
     "address": "80 Porter Parkway",
     "specialist": "Radiology",
     "fees": "1000",
-    "image": "http://dummyimage.com/130x100.png/cc0000/ffffff"
+    "image": "/doctor5.jpg"
   },
   {
     "id": 6,
@@ -57,7 +58,7 @@
     "address": "70549 Old Shore Alley",
     "specialist": "Skin",
     "fees": "2000",
-    "image": "http://dummyimage.com/107x100.png/5fa2dd/ffffff"
+    "image": "/doctor6.jpg"
   },
   {
     "id": 7,
@@ -67,7 +68,7 @@
     "address": "1153 Springs Court",
     "specialist": "Skin",
     "fees": "1000",
-    "image": "http://dummyimage.com/189x100.png/ff4444/ffffff"
+    "image": "/doctor7.jpg"
   },
   {
     "id": 8,
@@ -77,7 +78,7 @@
     "address": "436 Maple Wood Point",
     "specialist": "Plastic Surgery",
     "fees": "2000",
-    "image": "http://dummyimage.com/216x100.png/dddddd/000000"
+    "image": "/doctor8.jpg"
   },
   {
     "id": 9,
@@ -87,7 +88,7 @@
     "address": "26 Shelley Drive",
     "specialist": "Plastic Surgery",
     "fees": "1000",
-    "image": "http://dummyimage.com/155x100.png/5fa2dd/ffffff"
+    "image": "/doctor9.jpg"
   },
   {
     "id": 10,
@@ -97,7 +98,7 @@
     "address": "8107 Elka Way",
     "specialist": "Skin",
     "fees": "500",
-    "image": "http://dummyimage.com/113x100.png/cc0000/ffffff"
+    "image": "/doctor10.jpg"
   },
   {
     "id": 11,
@@ -107,7 +108,7 @@
     "address": "0 Waubesa Avenue",
     "specialist": "Skin",
     "fees": "1000",
-    "image": "http://dummyimage.com/200x100.png/dddddd/000000"
+    "image": "/doctor11.jpg"
   },
   {
     "id": 12,
@@ -117,7 +118,7 @@
     "address": "90 Packers Terrace",
     "specialist": "Radiology",
     "fees": "2000",
-    "image": "http://dummyimage.com/241x100.png/5fa2dd/ffffff"
+    "image": "/doctor12.jpg"
   },
   {
     "id": 13,
@@ -127,7 +128,7 @@
     "address": "95873 Green Hill",
     "specialist": "Cardiology",
     "fees": "1000",
-    "image": "http://dummyimage.com/152x100.png/dddddd/000000"
+    "image": "/doctor4.jpg"
   },
   {
     "id": 14,
@@ -137,7 +138,7 @@
     "address": "71682 Ludington Junction",
     "specialist": "Skin",
     "fees": "2000",
-    "image": "http://dummyimage.com/185x100.png/dddddd/000000"
+    "image": "/doctor5.jpg"
   },
   {
     "id": 15,
@@ -147,7 +148,7 @@
     "address": "30 Oxford Lane",
     "specialist": "Eyes",
     "fees": "500",
-    "image": "http://dummyimage.com/178x100.png/cc0000/ffffff"
+    "image": "/doctor6.jpg"
   },
   {
     "id": 16,
@@ -157,7 +158,7 @@
     "address": "993 Barnett Street",
     "specialist": "Cardiology",
     "fees": "1000",
-    "image": "http://dummyimage.com/214x100.png/ff4444/ffffff"
+    "image": "/doctor8.jpg"
   },
   {
     "id": 17,
@@ -167,7 +168,7 @@
     "address": "147 Luster Drive",
     "specialist": "Plastic Surgery",
     "fees": "500",
-    "image": "http://dummyimage.com/197x100.png/dddddd/000000"
+    "image": "/doctor11.jpg"
   },
   {
     "id": 18,
@@ -177,7 +178,7 @@
     "address": "3329 Packers Hill",
     "specialist": "Radiology",
     "fees": "1000",
-    "image": "http://dummyimage.com/137x100.png/dddddd/000000"
+    "image": "/doctor12.jpg"
   },
   {
     "id": 19,
@@ -187,7 +188,7 @@
     "address": "4 Onsgard Crossing",
     "specialist": "Radiology",
     "fees": "500",
-    "image": "http://dummyimage.com/148x100.png/5fa2dd/ffffff"
+     "image": "/doctor6.jpg"
   },
   {
     "id": 20,
@@ -197,7 +198,7 @@
     "address": "9 Westport Place",
     "specialist": "Eyes",
     "fees": "2000",
-    "image": "http://dummyimage.com/188x100.png/5fa2dd/ffffff"
+     "image": "/doctor7.jpg"
   },
   {
     "id": 21,
@@ -207,7 +208,7 @@
     "address": "16240 Prentice Parkway",
     "specialist": "Eyes",
     "fees": "1000",
-    "image": "http://dummyimage.com/225x100.png/cc0000/ffffff"
+     "image": "/doctor8.jpg"
   },
   {
     "id": 22,
@@ -217,7 +218,7 @@
     "address": "35704 Meadow Vale Road",
     "specialist": "Radiology",
     "fees": "2000",
-    "image": "http://dummyimage.com/129x100.png/cc0000/ffffff"
+     "image": "/doctor9.jpg"
   },
   {
     "id": 23,
@@ -227,7 +228,7 @@
     "address": "88104 Mayer Circle",
     "specialist": "Skin",
     "fees": "500",
-    "image": "http://dummyimage.com/192x100.png/ff4444/ffffff"
+    "image": "/doctor10.jpg"
   },
   {
     "id": 24,
@@ -237,7 +238,7 @@
     "address": "2905 7th Hill",
     "specialist": "Radiology",
     "fees": "1000",
-    "image": "http://dummyimage.com/124x100.png/5fa2dd/ffffff"
+    "image": "/doctor11.jpg"
   },
   {
     "id": 25,
@@ -247,6 +248,7 @@
     "address": "453 Bayside Circle",
     "specialist": "Cardiology",
     "fees": "2000",
-    "image": "http://dummyimage.com/148x100.png/ff4444/ffffff"
+    "image": "/doctor12.jpg"
   }
+  
 ]

@@ -16,6 +16,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 
+// Define the filter options
 const treatmentItems = {
   TreatmentName: [
     "Physical Therapy",
@@ -24,10 +25,11 @@ const treatmentItems = {
     "Cardiac Bypass Surgery",
     "Cosmetic Surgery",
   ],
-  Cost: ["500", "1500", , "5000",  "20000"],
-  Duration: [ "5", "10", "30", "60", "90"],
+  Cost: ["500", "1500", "5000", "20000"],
+  Duration: ["5", "10", "30", "60", "90"],
 };
 
+// Define form schema
 const FilterSchema = z.object({
   filters: z.array(z.string()).min(1, "Select at least one filter."),
 });
@@ -42,14 +44,25 @@ export function TreatmentFilterSidebar({
     defaultValues: { filters: [] },
   });
 
+  // Function to apply filter
   const applyFilter = (data: z.infer<typeof FilterSchema>) => {
-    const selected = data.filters;
+    const selected = data.filters.map((val) => val.toLowerCase());
 
-    const filtered = TreatmentRecords.filter((val) => {
-      const nameMatch = selected.includes(val.treatment_name);
-      const costMatch = selected.includes(String(val.cost));
-      const durationMatch = selected.includes(String(val.duration));
-      return nameMatch || costMatch || durationMatch;
+    const selectedNames = treatmentItems.TreatmentName.map((t) => t.toLowerCase());
+    const selectedCosts = treatmentItems.Cost.map((c) => c.toLowerCase());
+    const selectedDurations = treatmentItems.Duration.map((d) => d.toLowerCase());
+
+    const nameFilters = selected.filter((val) => selectedNames.includes(val));
+    const costFilters = selected.filter((val) => selectedCosts.includes(val));
+    const durationFilters = selected.filter((val) => selectedDurations.includes(val));
+
+    const filtered = TreatmentRecords.filter((t) => {
+      const nameMatch = nameFilters.length === 0 || nameFilters.includes(t.treatment_name.toLowerCase());
+      const costMatch = costFilters.length === 0 || costFilters.includes(String(t.cost).toLowerCase());
+      const durationMatch = durationFilters.length === 0 || durationFilters.includes(String(t.duration).toLowerCase());
+
+      // Only return records that match ALL selected filters
+      return nameMatch && costMatch && durationMatch;
     });
 
     onFilter(filtered);
@@ -72,16 +85,14 @@ export function TreatmentFilterSidebar({
                         <Checkbox
                           checked={field.value?.includes(opt)}
                           onCheckedChange={(checked) => {
-                            const newValues: string[] = checked
-                              ? [...field.value as string[], opt as string]
-                              : (field.value as string[]).filter((v: string) => v !== opt);
-                            field.onChange(newValues);
+                            const updated = checked
+                              ? [...field.value, opt]
+                              : field.value.filter((v: string) => v !== opt);
+                            field.onChange(updated);
                           }}
                         />
                       </FormControl>
-                      <FormLabel className="text-sm font-normal">
-                        {opt}
-                      </FormLabel>
+                      <FormLabel className="text-sm font-normal">{opt}</FormLabel>
                     </FormItem>
                   )}
                 />
@@ -97,7 +108,7 @@ export function TreatmentFilterSidebar({
             className="bg-red-500"
             onClick={() => {
               form.reset();
-              onFilter(TreatmentRecords); // Reset full list
+              onFilter(TreatmentRecords); // Show all if cleared
             }}
           >
             Clear

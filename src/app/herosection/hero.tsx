@@ -10,9 +10,9 @@ import {
 
 export default function HeroSection() {
   return (
-    <section className="bg-[#1344fe] text-white md:py-20 sm:py-13  ">
+    <section className="bg-[#1344fe] text-white md:py-20 sm:py-13 md:h-screen ">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-center ">
           <div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               Quality Healthcare <br className="hidden sm:block" />
@@ -56,13 +56,14 @@ export default function HeroSection() {
           </div>
 
           {/* Right Image */}
-          <div className="flex justify-center md:justify-end">
+          <div className="flex justify-center md:justify-end ">
             <Image
               src="/heroImage.png"
               alt="doctor"
               width={500}
               height={100}
               className="rounded-2xl w-full max-[500px] h-[400px] object-cover "
+              priority
             />
           </div>
         </div>

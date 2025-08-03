@@ -68,7 +68,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-6 text-sm text-gray-400">
-          <p>©2025 Doctify. All Rights Reserved</p>
+          <p>©2025 Cosmediate. All Rights Reserved</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <FaTwitter className="hover:text-white cursor-pointer" />
             <FaFacebookF className="hover:text-white cursor-pointer" />

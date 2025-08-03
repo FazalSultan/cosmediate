@@ -18,6 +18,7 @@ import {
   FormMessage,
 } from "./ui/form";
 
+// Filter Options Grouped
 const items = [
   {
     category: "Gender",
@@ -25,6 +26,7 @@ const items = [
       { id: "male", label: "Male" },
       { id: "female", label: "Female" },
       { id: "polygender", label: "Polygender" },
+      { id: "genderfluid", label: "Genderfluid" },
     ],
   },
   {
@@ -48,6 +50,7 @@ const items = [
   },
 ] as const;
 
+// Zod validation
 const FormSchema = z.object({
   items: z.array(z.string()).refine((value) => value.length > 0, {
     message: "You have to select at least one item.",
@@ -66,19 +69,46 @@ export function CheckboxReactHookFormMultiple({
     },
   });
 
+  // ✅ Grouped Filtering Logic
   function handleFoundSearch(selectedItems: string[]) {
-    const updatedResult = DoctorData.filter((resValue) =>
-      selectedItems.some(
-        (val) =>
-          val === resValue.specialist.toLowerCase() ||
-          val === resValue.gender.toLowerCase() ||
-          val === resValue.fees
-      )
+    const genderFilters = ["male", "female", "polygender", "genderfluid"];
+    const feesFilters = ["500", "1000", "2000"];
+    const specialistFilters = [
+      "eyes",
+      "skin",
+      "radiology",
+      "plastic surgery",
+      "dermatology",
+      "cardiology",
+    ];
+
+    const selectedGender = selectedItems.filter((item) =>
+      genderFilters.includes(item)
     );
+    const selectedFees = selectedItems.filter((item) =>
+      feesFilters.includes(item)
+    );
+    const selectedSpecialist = selectedItems.filter((item) =>
+      specialistFilters.includes(item)
+    );
+
+    const updatedResult = DoctorData.filter((doc) => {
+      const genderMatch =
+        selectedGender.length === 0 ||
+        selectedGender.includes(doc.gender.toLowerCase());
+      const feesMatch =
+        selectedFees.length === 0 || selectedFees.includes(doc.fees);
+      const specialistMatch =
+        selectedSpecialist.length === 0 ||
+        selectedSpecialist.includes(doc.specialist.toLowerCase());
+
+      return genderMatch && feesMatch && specialistMatch;
+    });
 
     onFilter(updatedResult);
   }
 
+  // Form submit
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast("You submitted the following values", {
       description: (

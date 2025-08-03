@@ -5,13 +5,14 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { TreatmentFilterSidebar } from "@/components/treatment-sidebar-filter";
 import { Button } from "@/components/ui/button";
+import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 
-export default function Treatment({
-  searchParams,
-}: {
-  searchParams: { treatmentname?: string };
-}) {
-  const res = searchParams.treatmentname?.trim().toLowerCase();
+export default function Treatment() {
+  const res = useSearchParams()
+    .get("treatmentname")
+    ?.trim()
+    .toLocaleLowerCase();
 
   const initialFiltered =
     !res || res === ""
@@ -24,28 +25,38 @@ export default function Treatment({
   const [showSidebar, setShowSidebar] = useState(true);
 
   return (
-    <div className="mainLayout bg-[#f9f9f9] min-h-screen py-10 px-4 md:flex md:gap-4">
-      <Button
-        variant="default"
-        className="md:hidden float-right bg-blue-600 ml-4"
-        onClick={() => setShowSidebar((prev) => !prev)}
-      >
-        {showSidebar ? "Hide Filter" : "Show Filter"}
-      </Button>
+    <div className="min-h-screen px-5 py-6 md:flex md:gap-6 bg-[url(/bg-main.svg)] bg-no-repeat bg-cover bg-center">
+      {/* Sidebar Toggle Button */}
+      <div className="md:hidden flex justify-end mb-4 w-full">
+        <Button
+          variant="default"
+          className="bg-blue-600"
+          onClick={() => setShowSidebar((prev) => !prev)}
+        >
+          {showSidebar ? "Hide Filter" : "Show Filter"}
+        </Button>
+      </div>
 
+      {/* Sidebar */}
       {showSidebar && (
-        <div className="md:h-screen md:w-64 w-full md:px-6 mb-4 md:mb-0">
+        <div className="w-full md:w-64 md:px-6 mb-4 md:mb-0">
           <TreatmentFilterSidebar onFilter={setFilteredData} />
         </div>
       )}
 
-      <div className="max-w-5xl mx-auto">
+      {/* Main Content */}
+      <div className="w-full">
+        {/* Search Form */}
         <div className="mb-8">
           <form
+            id="treatmentform"
             method="GET"
             className="flex flex-col sm:flex-row items-center gap-4"
           >
-            <Label htmlFor="treatmentname" className="text-lg font-medium md:flex hidden">
+            <Label
+              htmlFor="treatmentname"
+              className="text-lg font-medium hidden md:block"
+            >
               Search:
             </Label>
             <Input
@@ -53,32 +64,105 @@ export default function Treatment({
               id="treatmentname"
               name="treatmentname"
               className="w-full sm:w-[400px] px-4 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="treatment name..."
+              placeholder="Treatment name..."
               defaultValue={res || ""}
             />
           </form>
         </div>
 
+        {/* No Records Message */}
         {filteredData.length === 0 && (
-          <div className="text-center font-bold bg-red-400 text-white rounded py-5 px-4">
-            Search Not Found 😒👀, Let&apos;s try again 😉✨
+          <div className="flex flex-col items-center justify-center text-center p-10 bg-white rounded-xl shadow-md">
+            <div className="text-6xl mb-4">😕</div>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-2">
+              No Results Found
+            </h2>
+            <p className="text-gray-500 mb-4">
+              We could not find any doctors matching your current filters.
+            </p>
+            {/* <Button
+              className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+              onClick={() => window.location.reload()}
+            >
+              Clear Filters & Try Again
+            </Button> */}
           </div>
         )}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {/* Treatment Cards */}
+        <div className="grid grid-cols-1 gap-6">
           {filteredData.map((val) => (
+            // <div
+            //   key={val.id}
+            //   className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg flex flex-col lg:flex-row justify-between items-start gap-4 transition delay-150 duration-600 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-blue-600 hover:-translate-x-4 "
+            // >
+            //   <div className="flex-1 space-y-3 text-gray-800 ">
+            //     <h2 className="text-2xl font-semibold group-hover:text-white">{val.treatment_name}</h2>
+            //     <p>
+            //       <span className="font-medium">Cost:</span> {val.cost}
+            //     </p>
+            //     <p>
+            //       <span className="font-medium">Duration:</span> {val.duration}{" "}
+            //       days
+            //     </p>
+            //     <p>
+            //       <span className="font-medium">Status:</span> {val.status}
+            //     </p>
+            //     <p>
+            //       <span className="font-medium">Doctor:</span>{" "}
+            //       {val.doctor_assigned}
+            //     </p>
+            //     <p>
+            //       <span className="font-medium">Description:</span>{" "}
+            //       {val.description}
+            //     </p>
+            //   </div>
+            //   <div className="mt-4 lg:mt-0">
+            //     <Image
+            //       src="/cosmatic.jpg"
+            //       alt={val.treatment_name}
+            //       width={200}
+            //       height={200}
+            //       className="rounded-full w-[200px] h-[200px]  mx-auto object-cover"
+            //       priority
+            //     />
+            //   </div>
+            // </div>
             <div
               key={val.id}
-              className="bg-white rounded-xl shadow-md p-5 hover:shadow-lg transition"
+              className="group bg-white rounded-xl shadow-md p-6 hover:shadow-lg flex flex-col lg:flex-row justify-between items-start gap-4 transition delay-150 duration-600 ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-blue-600 hover:-translate-x-4"
             >
-              <p className="text-xl font-semibold text-gray-800">
-                {val.treatment_name}
-              </p>
-              <p className="text-gray-600">Cost: {val.cost}</p>
-              <p className="text-gray-600">Duration: {val.duration} days</p>
-              <p className="text-gray-600">Status: {val.status}</p>
-              <p className="text-gray-600">Doctor: {val.doctor_assigned}</p>
-              <p className="text-gray-600">Description: {val.description}</p>
+              <div className="flex-1 space-y-3 text-gray-800 group-hover:text-white">
+                <h2 className="text-2xl font-semibold">{val.treatment_name}</h2>
+                <p>
+                  <span className="font-medium">Cost:</span> {val.cost}
+                </p>
+                <p>
+                  <span className="font-medium">Duration:</span> {val.duration}{" "}
+                  days
+                </p>
+                <p>
+                  <span className="font-medium">Status:</span> {val.status}
+                </p>
+                <p>
+                  <span className="font-medium">Doctor:</span>{" "}
+                  {val.doctor_assigned}
+                </p>
+                <p>
+                  <span className="font-medium">Description:</span>{" "}
+                  {val.description}
+                </p>
+              </div>
+              <div className="mt-4 lg:mt-0">
+                <Image
+                  src="/cosmatic.jpg"
+                  alt={val.treatment_name}
+                  width={200}
+                  height={200}
+                  className="rounded-full w-[200px] h-[200px] mx-auto object-cover"
+                  priority
+                />
+              </div>
             </div>
           ))}
         </div>

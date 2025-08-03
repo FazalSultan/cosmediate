@@ -8,9 +8,9 @@ import Image from "next/image";
 
 const doctors = [
   { name: "Dr. Ayesha Khan", role: "Dentist", image: "/servicesimage.jpg" },
-  { name: "Dr. Hamza Ali", role: "Cardiologist", image: "/img2.webp" },
+  { name: "Dr. Hamza Ali", role: "Cardiologist", image: "/servicesImage2.webp" },
   { name: "Dr. Sana Rehman", role: "Dermatologist", image: "/servicesimage.jpg" },
-  { name: "Dr. Ahmed Raza", role: "Pediatrician", image: "/img2.webp" },
+  { name: "Dr. Ahmed Raza", role: "Pediatrician", image: "/servicesImage2.webp" },
 ];
 
 export default function Doctor() {

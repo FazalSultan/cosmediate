@@ -29,7 +29,7 @@ export default function ServicesSection() {
                   alt={service.title}
                   width={50}
                   height={50}
-                  className="w-[50px] h-[50px]"
+                  className="w-[50px] h-[50px] rounded-full bg-green-50"
                 />
               </div>
               <h3 className="text-lg font-bold mb-2 text-[#06070d]">{service.title}</h3>
